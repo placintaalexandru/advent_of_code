@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "advent-of-code-2022"
+version = "0.1.0"
+description = ""
+authors = ["Alexandru Placinta <alexandru.placinta@nexthink.com>"]
+readme = "README.md"
+packages = [{include = "advent_of_code_2022"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+anytree = "^2.8.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
