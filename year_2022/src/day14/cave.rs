@@ -142,7 +142,7 @@ impl Cave {
         // Add one column to the left, moves the sand source to the right
         self.sand_source.0 += 1;
 
-        for (idx, row) in self.grid.iter_mut().enumerate(){
+        for (idx, row) in self.grid.iter_mut().enumerate() {
             if idx == limit {
                 row.insert(0, Element::Rock);
             } else {
@@ -187,8 +187,7 @@ impl Cave {
             } else {
                 self.grid[current_position.1 as usize][current_position.0 as usize] = Element::Sand;
                 Ok(current_position.clone())
-            }
-
+            };
         }
 
         if matches!(cave_element, Element::Sand | Element::Rock) {
