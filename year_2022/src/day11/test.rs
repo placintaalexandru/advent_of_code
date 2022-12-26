@@ -17,7 +17,7 @@ impl FromStr for Test {
         }
 
         if tokens[0] != "Test" {
-            return Err(format!("`{}` is not a valid test command", s));
+            return Err(format!("`{}` is not a valid test1 command", s));
         }
 
         let tokens = tokens[1].trim_start().split(' ').collect::<Vec<&str>>();
@@ -25,7 +25,7 @@ impl FromStr for Test {
         match tokens[0] {
             "divisible" => {
                 if tokens[1] != "by" {
-                    return Err(format!("Invalid `divisible by` test from `{}`", s));
+                    return Err(format!("Invalid `divisible by` test1 from `{}`", s));
                 }
 
                 let d = tokens[2].parse::<usize>().unwrap();
@@ -33,7 +33,7 @@ impl FromStr for Test {
                     test: Box::new(move |val| val % d == 0),
                 });
             }
-            _ => Err(format!("Invalid test `{}`", s)),
+            _ => Err(format!("Invalid test1 `{}`", s)),
         }
     }
 }

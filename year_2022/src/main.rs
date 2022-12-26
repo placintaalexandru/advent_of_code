@@ -27,6 +27,14 @@ use advent_of_code::day20::Day20;
 #[allow(unused_imports)]
 use advent_of_code::day21::Day21;
 #[allow(unused_imports)]
+use advent_of_code::day22::Day22;
+#[allow(unused_imports)]
+use advent_of_code::day23::Day23;
+#[allow(unused_imports)]
+use advent_of_code::day24::Day24;
+#[allow(unused_imports)]
+use advent_of_code::day25::Day25;
+#[allow(unused_imports)]
 use advent_of_code::day3::Day3;
 #[allow(unused_imports)]
 use advent_of_code::day4::Day4;
@@ -40,6 +48,6 @@ use advent_of_code::day8::Day8;
 use advent_of_code::day9::Day9;
 
 fn main() {
-    println!("Part one: {}", Day21::part_one());
-    println!("Part two: {}", Day21::part_two());
+    println!("Part one: {}", Day25::part_one());
+    // println!("Part two: {}", Day24::part_two());
 }

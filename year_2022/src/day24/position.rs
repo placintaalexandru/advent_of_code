@@ -1,8 +1,7 @@
-use crate::day22::direction::Direction;
+use crate::day24::direction::Direction;
 use std::ops::{Add, AddAssign};
 
-/// Keeps row and column
-#[derive(Debug, Clone, Copy)]
+#[derive(Debug, Clone, Copy, Hash, Eq, PartialEq)]
 pub(crate) struct Position(pub(crate) i32, pub(crate) i32);
 
 impl AddAssign for Position {
@@ -23,10 +22,16 @@ impl Add for Position {
 impl From<&Direction> for Position {
     fn from(direction: &Direction) -> Self {
         match *direction {
-            Direction::Left => Self(0, -1),
-            Direction::Right => Self(0, 1),
             Direction::Up => Self(-1, 0),
             Direction::Down => Self(1, 0),
+            Direction::Right => Self(0, 1),
+            Direction::Left => Self(0, -1),
         }
+    }
+}
+
+impl Position {
+    pub(crate) fn manhattan_distance(&self, other: &Self) -> i32 {
+        (self.0 - other.0).abs() + (self.1 - other.1).abs()
     }
 }
